@@ -1,5 +1,6 @@
 import React from "react";
 import "./BuildForm.css";
+import { useNavigate } from "react-router-dom";
 import { DiGoogleCloudPlatform } from "react-icons/di";
 import { DiNginx } from "react-icons/di";
 import { FaReact,FaNode } from "react-icons/fa";
@@ -7,6 +8,11 @@ import logo from "../../assets/college_logo.svg";
 import vite from "../../assets/react.svg";
 
 const BuildForm = () => {
+  const navigate = useNavigate();
+
+  const handleCreditsClick=()=>{
+    navigate("/tableComponent");
+  }
   return (
     <div
       style={{
@@ -34,22 +40,22 @@ const BuildForm = () => {
         <div className="custom-form-container custom">
           <p>Name: Syed Umar</p>
           <p>Branch: CAI</p>
-          <p>Roll no: 21A81A43565</p>
+          <p>Roll no: 21A81A4356</p>
         </div>
         <div className="custom-form-container custom">
           <p>Name: Pilli Suresh</p>
           <p>Branch: CAI</p>
-          <p>Roll no: 21A81A43549</p>
+          <p>Roll no: 21A81A4349</p>
         </div>
         <div className="custom-form-container custom">
           <p>Name: Kodamanchili Varun</p>
           <p>Branch: CAI</p>
-          <p>Roll no: 21A81A43523</p>
+          <p>Roll no: 21A81A4323</p>
         </div>
         <div className="custom-form-container custom">
           <p>Name: Siva Teja Cherukupalli</p>
           <p>Branch: CAI</p>
-          <p>Roll no: 21A81A43511</p>
+          <p>Roll no: 21A81A4311</p>
         </div>
       </div>
       <h1 style={{ color: "white", marginTop: "1rem", marginBottom: "1rem" }}>
@@ -89,7 +95,11 @@ const BuildForm = () => {
             <p>Nginx</p>
           </div>
         </div>
+        
       </div>
+      <button onClick={handleCreditsClick} style={{ fontSize:"1rem",backgroundColor: "white",color:"black",marginTop:"2rem",padding:"1rem",outline:"none",borderRadius:"6px",cursor:"pointer",}}>
+        Back
+        </button>
     </div>
   );
 };
